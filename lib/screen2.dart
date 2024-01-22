@@ -11,13 +11,31 @@ class _Screen2State extends State<Screen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.lightGreen,
-          title: Center(child: Text("Corn Salad with Red Beans"))),
+      // appBar: AppBar(
+      //     backgroundColor: Colors.lightGreen, title: Center(child: Text(" "))),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Stack(
+            children: [
+              Image.asset(
+                "images/salad_img.jpg",
+                height: 250,
+                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.cover,
+              ),
+              Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Center(
+                      child: Text(
+                    "Corn Salad with Red Beans",
+                    style: TextStyle(fontSize: 30, color: Colors.white),
+                  )))
+            ],
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -82,7 +100,10 @@ class _Screen2State extends State<Screen2> {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                    Icon(Icons.add_circle),
+                    Icon(
+                      Icons.add_circle,
+                      color: Colors.green,
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text("This Text is in Container"),
@@ -96,7 +117,10 @@ class _Screen2State extends State<Screen2> {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   children: [
-                    Icon(Icons.remove_circle),
+                    Icon(
+                      Icons.remove_circle,
+                      color: Colors.red,
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text("This Text is in Container"),
