@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screen2.dart';
+import 'package:flutter_screen_1/screen3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Screen2(),
+      home: const Screen3(),
     );
   }
 }
