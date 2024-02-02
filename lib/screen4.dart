@@ -12,125 +12,111 @@ class _Screen4State extends State<Screen4> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color.fromARGB(255, 2, 84, 151),
-        body: Column(children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text("          "),
-              const Text(
-                "Dental",
-                style:
-                    TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-              ),
-              Container(
-                margin: const EdgeInsets.all(2),
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(100))),
-                child: const Icon(
-                  Icons.cancel,
-                  size: 34,
-                  color: Colors.grey,
+        body: Padding(
+          padding: const EdgeInsets.all(2),
+          child: Column(children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text("          "),
+                const Text(
+                  "Dental",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.white),
                 ),
-              ),
-            ],
-          ),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Progress",
-                style:
-                    TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                "1 of 2",
-                style:
-                    TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: [
-          Padding(
-            padding: const EdgeInsets.all(4),
-            child: Container(
-              height: 4,
+                Container(
+                  margin: const EdgeInsets.all(2),
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(100))),
+                  child: const Icon(
+                    Icons.cancel,
+                    size: 34,
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Progress",
+                  style: TextStyle(
+                      color: Colors.grey, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "1 of 2",
+                  style: TextStyle(
+                      color: Colors.grey, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const Padding(
+              padding: EdgeInsets.all(4),
               child: LinearProgressIndicator(
                 value: 0.5,
                 backgroundColor: Colors.grey,
                 color: Colors.white,
+                borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
             ),
-          ),
-          // Container(
-          //   height: 4,
-          //   width: MediaQuery.of(context).size.width / 1.1,
-          //   margin: const EdgeInsets.all(2),
-          //   decoration: const BoxDecoration(
-          //       color: Colors.grey,
-          //       borderRadius: BorderRadius.all(Radius.circular(100))),
-          // ),
-          //   ],
-          //),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Row(
-              children: [
-                Text(
-                  "What Would You Like To Discuss?",
-                  // softWrap: true,
-                  // textAlign: TextAlign.left,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.w500),
-                )
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Text(
-                  "Choose Evalute The Usefulness",
-                  // softWrap: true,
-                  // textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Colors.white,
-                    // fontSize: 8,
+            const Padding(
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    "What Would You \nLike To Discuss?",
+                    // softWrap: true,
+                    // textAlign: TextAlign.left,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontWeight: FontWeight.w500),
                   ),
-                )
-              ],
+                )),
+            const Padding(
+              padding: EdgeInsets.all(2),
+              child: Row(
+                children: [
+                  Text(
+                    "Choose Evalute The Usefulness",
+                    // softWrap: true,
+                    // textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.white,
+                      // fontSize: 8,
+                    ),
+                  )
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20),
-            child: Row(children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Row(children: [
+                Expanded(
+                    child: getContainerWidget(
+                        icon: Icons.check_circle,
+                        text: "Text 1",
+                        icon1: Icons.volunteer_activism)),
+              ]),
+            ),
+            Row(children: [
               Expanded(
                   child: getContainerWidget(
-                      icon: Icons.check_circle,
-                      text: "Text 1",
-                      icon1: Icons.volunteer_activism)),
+                      icon: Icons.circle, text: "Text 2", icon1: Icons.circle)),
             ]),
-          ),
-          Row(children: [
-            Expanded(
-                child: getContainerWidget(
-                    icon: Icons.circle, text: "Text 2", icon1: Icons.circle)),
+            Row(children: [
+              Expanded(
+                  child: getContainerWidget(
+                      icon: Icons.circle, text: "Text 3", icon1: Icons.circle)),
+            ]),
+            Row(children: [
+              Expanded(
+                  child: getContainerWidget(
+                      icon: Icons.circle, text: "Text 4", icon1: Icons.circle))
+            ]),
           ]),
-          Row(children: [
-            Expanded(
-                child: getContainerWidget(
-                    icon: Icons.circle, text: "Text 3", icon1: Icons.circle)),
-          ]),
-          Row(children: [
-            Expanded(
-                child: getContainerWidget(
-                    icon: Icons.circle, text: "Text 4", icon1: Icons.circle))
-          ]),
-        ]));
+        ));
   }
 
   Widget getContainerWidget(
@@ -149,7 +135,7 @@ class _Screen4State extends State<Screen4> {
           //     offset: Offset(03, 05),
           //   )
           // ],
-          color: Color.fromARGB(172, 9, 2, 70),
+          color: const Color.fromARGB(172, 9, 2, 70),
           borderRadius: BorderRadius.circular(50)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -161,21 +147,23 @@ class _Screen4State extends State<Screen4> {
             color: Colors.white,
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 100),
+            padding: const EdgeInsets.only(right: 150),
             child: Text(
               text,
-              // textAlign: TextAlign.center,
+              textAlign: TextAlign.left,
               style: const TextStyle(fontSize: 12, color: Colors.white),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.all(2),
-            decoration: const BoxDecoration(
-                color: const Color.fromARGB(255, 2, 84, 151),
-                borderRadius: BorderRadius.all(Radius.circular(100))),
-            child: Icon(
-              icon1,
-              size: 34,
+          ClipOval(
+            child: Container(
+              margin: const EdgeInsets.all(2),
+              decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 2, 84, 151),
+                  borderRadius: BorderRadius.all(Radius.circular(100))),
+              child: Icon(
+                icon1,
+                size: 34,
+              ),
             ),
           ),
         ],
