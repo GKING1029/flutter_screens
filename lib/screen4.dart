@@ -143,7 +143,7 @@ class _Screen4State extends State<Screen4> {
         children: [
           Icon(
             icon,
-            size: 36,
+            size: 48,
             color: Colors.white,
           ),
           Padding(
@@ -162,7 +162,7 @@ class _Screen4State extends State<Screen4> {
                   borderRadius: BorderRadius.all(Radius.circular(100))),
               child: Icon(
                 icon1,
-                size: 34,
+                size: 48,
               ),
             ),
           ),
